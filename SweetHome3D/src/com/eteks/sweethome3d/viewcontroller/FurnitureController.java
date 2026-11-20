@@ -532,6 +532,7 @@ public class FurnitureController implements Controller {
               HomePieceOfFurniture.SortableProperty.WIDTH,
               HomePieceOfFurniture.SortableProperty.DEPTH,
               HomePieceOfFurniture.SortableProperty.HEIGHT,
+              HomePieceOfFurniture.SortableProperty.VOLUME,
               HomePieceOfFurniture.SortableProperty.X,
               HomePieceOfFurniture.SortableProperty.Y,
               HomePieceOfFurniture.SortableProperty.ELEVATION,
@@ -1024,7 +1025,7 @@ public class FurnitureController implements Controller {
     
     int leadPieceIndex = furnitureSortedAlongBackLine.indexOf(leadPiece);    
     Line2D backLine = new Line2D.Float(points [0][0], points [0][1], points [1][0], points [1][1]);    
-    float sideDistance = leadPiece.getWidth() / 2;
+      float sideDistance = leadPiece.getWidth() / 2;
     for (int i = leadPieceIndex + 1; i < furnitureSortedAlongBackLine.size(); i++) {
       sideDistance += alignPieceOfFurnitureAlongSides(furnitureSortedAlongBackLine.get(i), 
           leadPiece, backLine, false, centerLine, sideDistance);
